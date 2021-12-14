@@ -9,7 +9,7 @@ const authToken = (req, res, next) => {
       .send({ message: "Token is missing" });
   }
 
-  JWT.verify(token, process.env.JWT_SECRET, (err, decoded) => {
+  JWT.verify(token, "jwt_secret", (err, decoded) => {
     if (err) {
       return res
         .status(httpStatus.FORBIDDEN)
