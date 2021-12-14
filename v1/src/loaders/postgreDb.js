@@ -1,3 +1,4 @@
+const pg = require("pg");
 const Sequelize = require("sequelize");
 const sequelize = new Sequelize(
   `wttvabna`,
@@ -6,6 +7,7 @@ const sequelize = new Sequelize(
   {
     host: `abul.db.elephantsql.com`,
     dialect: "postgres",
+    dialectModule: pg,
   }
 );
 
