@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(helmet());
 
 app.listen(3000, () => {
-  console.log(`Server is running on port 3000`);
+  console.log(`Server is running on port 300`);
   app.use("/users", UserRoutes);
   app.use("/factories", FactoryRoutes);
   app.use("/units", UnitRoutes);
