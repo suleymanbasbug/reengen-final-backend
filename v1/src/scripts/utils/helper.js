@@ -15,7 +15,7 @@ const generateAccessToken = (user) => {
   return JWT.sign({ user }, "jwt_secret", { expiresIn: "1h" });
 };
 const generateRefreshToken = (user) => {
-  return JWT.sign({ user }, process.env.JWT_REFRESH_SECRET);
+  return JWT.sign({ user }, "jwt_refresh_secret");
 };
 
 module.exports = {
